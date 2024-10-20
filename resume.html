@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+          <div class="logo">
+            <span class="logo-text">Prashant Patil</span>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="/resume.html">Resume</a></li>
+            <li><a href="#hire" class="hire">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="resumeContainer">
+        <div class="leftResume">
+          <div class="resume">
+            <div class="personal">
+              <h2>Prashant Patil</h2>
+              <p>prashantjpatil49@gmail.com | (+91) 9021740501</p>
+            </div>
+            <div class="outerBlockResume">
+              <h3>EDUCATION</h3>
+              <div class="college">
+                <div class="listResume">
+                  <li>Computer Engineering | SSBT COET, JALGAON</li>
+                </div>
+                <div class="listResume textRight"><p>CGPA : 7.79 | T.E</p></div>
+                <div class="listResume">
+                  <li>XII | J. E. School, Muktainagar</li>
+                </div>
+                <div class="listResume textRight"><p>71.67% | 2021</p></div>
+              </div>
+            </div>
+  
+            <div class="outerBlockResume">
+              <h3>SKILLS</h3>
+              <div class="innerBlockResume">
+                <div class="listResume"><li>HTML, CSS, Javascript</li></div>
+                <div class="listResume"><li>Express, Node</li></div>
+                <div class="listResume"><li>ReactJS</li></div>
+                <div class="listResume">
+                  <li>TailwindCSS, Bootstrap, MaterialUI</li>
+                </div>
+                <div class="listResume"><li>MangoDB, MySQL</li></div>
+                <div class="listResume"><li>Git, Github</li></div>
+              </div>
+            </div>
+  
+            <div class="outerBlockResume">
+              <h3>PROJECTS</h3>
+              <div class="slideshow-container">
+                <div class="slide innerBlockResume" id="slide1">
+                  <h4>Movie Diss</h4>
+                  <p>
+                    A Full responsive Open Source AI Tool for 10X your
+                    Productivity it can Generate Music, Video, Photo, Code & Chat.
+                  </p>
+                </div>
+                <div class="slide innerBlockResume" id="slide2">
+                  <h4>Weather App</h4>
+                  <p>
+                    A Full responsive Open Source AI Tool for 10X your
+                    Productivity it can Generate Music, Video, Photo, Code & Chat.
+                  </p>
+                </div>
+                <div class="slide innerBlockResume" id="slide3">
+                  <h4>Multi AI</h4>
+                  <p>
+                    A Full responsive Open Source AI Tool for 10X your
+                    Productivity it can Generate Music, Video, Photo, Code & Chat.
+                  </p>
+                </div>
+                <div class="slide innerBlockResume" id="slide4">
+                  <h4>Car Rental</h4>
+                  <p>
+                    A Full responsive Open Source AI Tool for 10X your
+                    Productivity it can Generate Music, Video, Photo, Code & Chat.
+                  </p>
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                <!-- Navigation buttons -->
+              </div>
+            </div>
+            <div class="outerBlockResume">
+              <h3>INTERNSHIPS</h3>
+              <div class="college">
+                <div class="listResume">
+                  <h4>Dakshit Dolphin Designers Pvt Ltd</h4>
+                </div>
+                <div class="listResume textRight">
+                  <p><i>JULY-OCT (2024)</i></p>
+                </div>
+                <div class="listResume">
+                  <p>Fron-End Developer</p>
+                </div>
+                <div class="listResume textRight"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightResume">
+          <ul class="resumeDetail">
+            <li>Education</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Experience</li>
+            <li>Personal</li>
+          </ul>
+        </div>
+      </div>
+</body> <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Hide all slides
+      }
+      slides[index].style.display = "block"; // Show the current slide
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0; // Loop back to the first slide
+      if (slideIndex < 0) slideIndex = slides.length - 1; // Go to the last slide
+      showSlide(slideIndex);
+    }
+
+    // Initialize the first slide
+    showSlide(slideIndex);
+  </script>
+</html>

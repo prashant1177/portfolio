@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,10 +14,11 @@
     />
   </head>
   <body>
+    <button class="backToTop">&#8593;</button>
     <div class="topMSG">
       <p>Success is built on discipline, not comfort.</p>
     </div>
-    <nav class="navbar">
+    <nav class="navbar" id="navbarSection">
       <div class="navbar-left">
         <div class="logo">
           <span class="logo-text">Prashant Patil</span>
@@ -24,10 +26,10 @@
       </div>
       <div class="navbar-right">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="/resume.html">Resume</a></li>
-          <li><a href="#hire" class="hire">Contact Me</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#projectSection">Projects</a></li>
+          <li><a href="#resumeSection">Resume</a></li>
+          <li><a href="#contactSection" class="hire">Contact Me</a></li>
         </ul>
       </div>
     </nav>
@@ -70,8 +72,8 @@
         </p>
 
         <div class="introBTNContainer">
-          <button class="introBTN">Connect</button>
-          <button class="introBTNOutline">Resume</button>
+         <a href="#contactSection"> <button class="introBTN">Connect</button></a>
+          <a href="#resumeSection"><button class="introBTNOutline">Resume</button></a>
         </div>
       </div>
       <div class="rightIntro">
@@ -82,8 +84,7 @@
       </div>
     </div>
 
-    
-    <div class="cardSection">
+    <div class="cardSection" id="projectSection">
       <h1>Projects</h1>
       <div class="card-container">
         <div class="card">
@@ -235,7 +236,7 @@
       </div>
     </div> -->
 
-    <div class="resumeContainer">
+    <div class="resumeContainer" id="resumeSection">
       <div class="leftResume">
         <div class="resume">
           <div class="personal" id="personalSection">
@@ -323,16 +324,17 @@
         </div>
       </div>
       <div class="rightResume">
-        <ul class="resumeDetail"><li>
-          <button
-            id="personal"
-            onmouseover="resumeHover('personalSection')"
-            onmouseleave="resumeLeave('personalSection')"
-            class="btnResumeDetails"
-          >
-            Personal
-          </button>
-        </li>
+        <ul class="resumeDetail">
+          <li>
+            <button
+              id="personal"
+              onmouseover="resumeHover('personalSection')"
+              onmouseleave="resumeLeave('personalSection')"
+              class="btnResumeDetails"
+            >
+              Personal
+            </button>
+          </li>
           <li>
             <button
               id="education"
@@ -373,11 +375,10 @@
               Experience
             </button>
           </li>
-          
         </ul>
       </div>
     </div>
-    <div class="formContainer">
+    <div class="formContainer" id="contactSection">
       <div class="title">Contact Me</div>
       <div class="form">
         <div class="input-container ic1">
@@ -408,12 +409,15 @@
       </div>
     </div>
 
-    <div class="gradientCard">
+    <!-- <div class="gradientCard">
     </div>
     <div class="gradientCard2">
     </div>
     <div class="gradientCard3">
-    </div>
+    </div> -->
+    <footer class="footer">
+      <a href="#navbarSection"><div class="footerBTN">Go back to top &#8593;</div></a>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>

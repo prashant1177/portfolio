@@ -17,6 +17,26 @@
   --main-color: #00abf0;
 }
 
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+::-webkit-scrollbar-button{
+  display: none;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--text-color);
+  background-image: linear-gradient(to right, var(--bg-color) 0%, var(--second-bg-color) 100%);
+  border-radius: 1rem;
+  transition: all 1s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-image: linear-gradient(to right, var(--second-bg-color) 0%, var(--second-bg-color) 100%);
+  border-radius: .5rem;
+  transition: all 1s ease-in-out;
+}
 
 html {
   font-size: 62.5%;
@@ -44,13 +64,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 16px;
+  padding-inline: 5%;
   color: var(--text-color);
-  margin-inline: 5%;
-  z-index: 1;
-  width: calc(100%-20px);
+  z-index: 5;
+  width: calc(100%);
   position: sticky;
-  background-color: var(--bg-color);
+  top: 0;
+  background-color: #081b29a7;
 }
 
 .navbar-left {
@@ -519,13 +540,15 @@ h1 {
   display: grid;
   grid-template-columns: 0.55fr 0.45fr;
   height: 100vh;
+  z-index: 6;
 }
 
 .leftResume {
   display: flex;
   justify-content: end;
   width: 100%;
-  height: auto;
+  height: 100%;
+  z-index: 6;
 }
 
 .resume {
@@ -586,7 +609,7 @@ h1 {
   padding-block: 12px;
   border-bottom: 1px solid black;
   transition: all 0.4s ease-in-out;
-  transform-origin: bottom;
+  transform-origin: top;
 }
 
 .personal h2 {
@@ -864,4 +887,20 @@ h1 {
     #86a8e7,
     #7f7fd5
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.backToTop{
+  padding: 8px 24px;
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+  font-size: xx-large;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  z-index: 10;
+  transition: all .3s ease-in;
+}
+.backToTop:hover{
+  background-color: var(--Second-text-color);
+  color: var(--bg-color);
 }

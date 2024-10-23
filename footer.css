@@ -1,0 +1,18 @@
+.footer {
+    background-color: var(--bg-color);
+    text-align: center;
+    font-size: medium;
+    width: 100%;
+  }
+
+  .footer a{
+    color: var(--text-color);
+    width: 100%;
+}
+
+.footerBTN{
+    width: 100%;
+    height: 100%;
+    padding: 24px 0;
+}
+  

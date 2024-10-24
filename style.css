@@ -329,9 +329,6 @@ button {
   width: calc(100%-20vw);
   height: auto;
   margin-inline: 10vw;
-  /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
-  /* background-color:#1e0b1b; */
-  /* color: white; */
   padding-left: 64px;
   padding-top: 64px;
   display: grid;
@@ -412,12 +409,11 @@ h1 {
   align-items: center;
   flex-direction: column;
 }
-.rightIntroContainer {
+
+.rightIntroIMG {
   width: 90%;
   height: 160px;
   background-color: #3b41c5;
-  /* transform: rotate(4deg); */
-  background-image: url(/p1.png);
   background-size: cover;
   margin-top: -16px;
   border-radius: 8px;
@@ -425,51 +421,24 @@ h1 {
   z-index: 1; /* Set default z-index */
   box-shadow: 50px 50px 100px var(--second-bg-color);
   transition: all 0.4s ease-in-out;
+}
+
+.rightIntroContainer {
+  background-image: url(/p1.png);
 }
 
 .rightIntroContainer2 {
-  width: 90%;
-  height: 160px;
-  background-color: #3b41c5;
   transform: rotate(2.5deg);
   background-image: url(/prashu.png);
-  background-size: cover;
-  margin-top: -16px;
-  border-radius: 8px;
-  position: relative; /* Required for z-index to work */
-  z-index: 1; /* Set default z-index */
-  box-shadow: 50px 50px 100px var(--second-bg-color);
-  transition: all 0.4s ease-in-out;
 }
 
 .rightIntroContainer3 {
-  width: 90%;
-  height: 160px;
-  background-color: #3b41c5;
   transform: rotate(-2deg);
   background-image: url(/prashu.png);
-  background-size: cover;
-  margin-top: -16px;
-  border-radius: 8px;
-  position: relative; /* Required for z-index to work */
-  z-index: 1; /* Set default z-index */
-  box-shadow: 50px 50px 100px var(--second-bg-color);
-  transition: all 0.4s ease-in-out;
 }
 
 .rightIntroContainer4 {
-  width: 90%;
-  height: 160px;
-  background-color: #3b41c5;
-  transform: rotate(0deg);
   background-image: url(/prashu.png);
-  background-size: cover;
-  margin-top: -16px;
-  border-radius: 8px;
-  position: relative; /* Required for z-index to work */
-  z-index: 1; /* Set default z-index */
-  box-shadow: 50px 50px 100px var(--second-bg-color);
-  transition: all 0.4s ease-in-out;
 }
 .rightIntroContainer:hover {
   box-shadow: 0px 0px 100px var(--main-color);
@@ -552,7 +521,7 @@ h1 {
 }
 
 .resume {
-  width: 60%;
+  width: 70%;
   height: 100%;
   background-color: var(--second-bg-color);
   /* filter: drop-shadow(0px 0px 64px var(--text-color)); */
@@ -839,56 +808,6 @@ h1 {
   width: 100%;
 }
 
-.gradientCard {
-  width: 500px;
-  height: 500px;
-  background: hsla(333, 100%, 53%, 1);
-  background: #2193b0; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #6dd5ed,
-    #2193b0
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #6dd5ed,
-    #2193b0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.gradientCard2 {
-  width: 500px;
-  height: 500px;
-  background: #00b4db; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #0083b0,
-    #00b4db
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #0083b0,
-    #00b4db
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.gradientCard3 {
-  width: 500px;
-  height: 500px;
-  background: #7f7fd5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #91eae4,
-    #86a8e7,
-    #7f7fd5
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #91eae4,
-    #86a8e7,
-    #7f7fd5
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .backToTop{
   padding: 8px 24px;
   background-color: var(--second-bg-color);
@@ -904,3 +823,94 @@ h1 {
   background-color: var(--Second-text-color);
   color: var(--bg-color);
 }
+
+
+@media screen and (max-width: 1050px) {
+  
+.introContainer {
+  width: calc(100%-4vw);
+  margin-inline: 2vw;
+  padding-left: 32px;
+  padding-top: 32px;
+}
+
+.form {
+  background-color: var(--second-bg-color);
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: max-content;
+  width: 75%;
+  padding: 20px;
+  transition: all 0.5s ease;
+  margin-top: 24px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 850px) {
+  
+  .introContainer {
+    width: calc(100%-2vw);
+    margin-inline: 1vw;
+    padding-left: 16px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .rightIntro{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid var(--second-bg-color);
+    padding-bottom: 4px;
+  }
+  
+.rightIntroIMG {
+  width: 90%;
+  height: 160px;
+  background-color: #3b41c5;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+  border-radius: 0px;
+  transform: rotate(0);
+  position: relative; /* Required for z-index to work */
+  z-index: 1; /* Set default z-index */
+  box-shadow: none;
+  transition: all 0.4s ease-in-out;
+}
+
+
+  .form {
+    width: 90%;
+  }
+  .resumeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .resume {
+    width: 90%;
+    padding: auto;
+    margin: auto;
+  }
+  .rightResume {
+    display: none;
+  }
+  .card-container {
+    padding-inline: 20px;
+  }
+
+  
+.outerBlockResume:hover {
+  transform: scale(1);
+}
+
+.personal:hover {
+  transform: scale(1);
+}
+  }
